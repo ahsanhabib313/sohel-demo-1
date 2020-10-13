@@ -426,6 +426,7 @@ body{
 }
 #footer{
     clear: both;
+    height: 30px;
 }
 
 #footer .footer-left{
@@ -455,10 +456,11 @@ body{
 #footer .footer-right ul {
     list-style: none;
     margin-right: 20px;
+    margin-top: 5px;
 }
 #footer .footer-right ul li {
     float: left;
-    margin-left: 5px;
+    margin-left: 5px; font-size: 13px;
 }
 #footer .footer-right ul li a{
     font-size: 13px;
