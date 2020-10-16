@@ -145,12 +145,12 @@ body{
 #main-section .sub-menu ul li ul.sub-main-submenu{
   display: none;
 }
-#main-section .sub-menu ul li:hover ul.sub-main-submenu{
+/*#main-section .sub-menu ul li:hover ul.sub-main-submenu{
     display: block;
 }
 #main-section .sub-menu ul li:hover a i{
     transform: rotate(-180deg);
-}
+}*/
 #main-section .sub-menu ul li ul.sub-main-submenu {
     display: none;
     padding-left: 20px;
@@ -283,6 +283,12 @@ body{
     overflow-y: scroll;
     max-height: 316px;
 }
+.ques-box {
+    margin-top: 55px;
+    border: 1px solid #ddd9d9;
+    overflow-y: scroll;
+    max-height: 316px;
+}
 #main-section .main-section-content .question-panel .ques-source-panel .ques-box .ques{
     height: 65px;
     box-shadow: 1px 1px 10px 2px #938e8e;
@@ -291,12 +297,33 @@ body{
     margin-left: 1px;
 }
 
+
 #main-section .main-section-content .question-panel .ques-source-panel .ques-box .ques img {
     float: left;
     margin-top: 20px;
     width: 50px;
 }
+
 #main-section .main-section-content .question-panel .ques-source-panel .ques-box .ques p{
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 10px;
+    text-align: left;
+}
+#main-section .main-section-content .exam-source-panel .exam-box .ques{
+    height: 65px;
+    box-shadow: 1px 1px 10px 2px #938e8e;
+    margin-top: 8px;
+    width: 335px;
+    margin-left: 1px;
+}
+
+#main-section .main-section-content .exam-source-panel .exam-box .ques img {
+    float: left;
+    margin-top: 20px;
+    width: 50px;
+}
+#main-section .main-section-content .exam-source-panel .exam-box .ques p{
     font-size: 14px;
     line-height: 16px;
     padding-top: 10px;
@@ -359,6 +386,7 @@ body{
     border: 1px solid #ddd9d9;
     max-height: 350px;
     overflow-y: scroll;
+
 }
 #main-section .main-section-content .exam-source-panel .exam-box .exam{
     height: 65px;
@@ -378,9 +406,27 @@ body{
     padding-top: 10px;
     text-align: left;
 }
-
+.exam{
+    height: 65px;
+    box-shadow: 1px 1px 10px 2px #938e8e;
+    margin-top: 8px;
+    width: 335px;
+    margin-left: 1px;
+}
+.exam img{
+    float: left;
+    margin-top: 20px;
+    width: 50px;
+}
+.exam p{
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 10px;
+    text-align: left;
+}
 
 #main-section .main-section-content .exam-source-panel .exam-box button {
+
     font-size: 13px;
     padding: 5px 15px;
     outline: none;
@@ -388,11 +434,12 @@ body{
     box-shadow: none;
     background: #bbb;
     border: none;
-    float: right;
-    margin-top: 125px;
     color: #fff;
-    margin-right: 20px;
-    margin-bottom: 5px;
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    float: right;
 }
 #main-section .main-section-content .submit-panel{
     clear: both;
@@ -465,4 +512,7 @@ body{
 #footer .footer-right ul li a{
     font-size: 13px;
 
+}
+.draggable.dragging {
+    opacity: .5;
 }

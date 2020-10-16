@@ -13,6 +13,7 @@
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
+    <script src="js/drag_and_drop.js" defer></script>
     <title>Exam Owl</title>
 </head>
 <body>
@@ -37,7 +38,7 @@
                 </div>
                 <div class="profile-name">
                     <ul>
-                        <li><a href="#">Sheikh Ahsan Habib<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <li><a href="#">Sheikh Ahsan Habib<i  class="fa fa-caret-down" aria-hidden="true"></i></a>
                             <ul>
                                 <li><a href="#">sub-menu</a></li>
                             </ul>
@@ -56,15 +57,13 @@
             <div class="sub-menu">
                 <ul class="sub-main-menu">
                     <li><a href="#">Questions</a></li>
-                    <li><a href="#">Quiz/Exam<i class="fa fa-caret-up" aria-hidden="true"></i></a>
-                        <ul class="sub-main-submenu">
+                    <li onclick="dropdownfun()"><a href="#">Quiz/Exam<i id="submenu-caret-down" class="fa fa-caret-down" aria-hidden="true"></i></a>
+                        <ul id="sidebar-submenu" class="sub-main-submenu">
                             <li><a href="#">Create Exam</a></li>
                             <li><a href="#">Draft Exams</a></li>
                             <li><a href="#">my Exams</a></li>
                             <li><a href="#">Schedule Exams</a></li>
                         </ul>
-
-
                     </li>
                     <li><a href="#">Studey Notes</a></li>
                     <li><a href="#">Class</a></li>
@@ -128,37 +127,55 @@
                                 </div>
                             </div>
                             <div class="ques-box">
-                                <div class="ques">
+                                <div class="ques draggable"  draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
                                         has been</p>
                                 </div>
-                                <div class="ques">
+                                <div class="ques draggable"  draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
                                         has been</p>
                                 </div>
-                                <div class="ques">
+                                <div class="ques draggable"  draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
                                         has been</p>
                                 </div>
-                                <div class="ques">
+                                <div class="ques draggable"  draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
                                         has been</p>
                                 </div>
-                                <div class="ques">
+                                <div class="ques draggable" draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
                                         has been</p>
                                 </div>
-                                <div class="ques">
+                                <div class="ques draggable" draggable="true">
+                                    <img src="images/icon.png">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum
+                                        has been</p>
+                                </div>
+                                <div class="ques draggable">
+                                    <img src="images/icon.png">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum
+                                        has been</p>
+                                </div>
+                                <div class="ques draggable" draggable="true">
+                                    <img src="images/icon.png">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum
+                                        has been</p>
+                                </div>
+                                <div class="ques draggable" draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
@@ -176,19 +193,19 @@
                         <div class="exam-source-panel">
                             <p>Exam Questions Panel</p>
                             <div class="exam-box">
-                                <div class="exam">
+                                <div class="exam draggable" draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
                                         has been</p>
                                 </div>
-                                <div class="exam">
+                                <div class="exam draggable" draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
                                         has been</p>
                                 </div>
-                                <div class="exam">
+                                <div class="exam draggable" draggable="true">
                                     <img src="images/icon.png">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                         Ipsum
@@ -236,6 +253,20 @@
     </div>
 </footer>
 
+<script type="text/javascript">
+    function dropdownfun() {
+        var Submenu = document.getElementById('sidebar-submenu');
+        var subicon = document.getElementById('submenu-caret-down');
+
+            if (Submenu.style.display=="none") {
+                Submenu.style.display="block";
+                subicon.style.transform="rotate(180deg)";
+            } else {
+                Submenu.style.display="none";
+                subicon.style.transform="rotate(0deg)";
+            }
+        }
+</script>
 
 </body>
 </html>
